@@ -15,6 +15,7 @@
 	"author": "Edgar Rivera <edgar.riveraj@gmail.com>",
 	"license": "ISC",
 	"dependencies": {
+		"bcryptjs": "2.4.3",
 		"bunyan": "1.8.15",
 		"cloudinary": "1.37.0",
 		"compression": "1.7.4",
@@ -26,14 +27,18 @@
 		"helmet": "7.0.0",
 		"hpp": "0.2.3",
 		"http-status-codes": "2.2.0",
+		"joi": "17.9.2",
+		"jsonwebtoken": "9.0.0",
 		"mongoose": "7.2.1",
 		"socket.io": "4.6.1"
 	},
 	"devDependencies": {
+		"@types/bcryptjs": "2.4.2",
 		"@types/bunyan": "1.8.8",
 		"@types/compression": "1.7.2",
 		"@types/cookie-session": "2.0.44",
 		"@types/hpp": "0.2.2",
+		"@types/jsonwebtoken": "9.0.2",
 		"@typescript-eslint/eslint-plugin": "5.59.7",
 		"@typescript-eslint/parser": "5.59.7",
 		"eslint": "8.41.0",
