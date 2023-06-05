@@ -13,6 +13,7 @@ import { logger } from '@configs/configLogs';
 import { config } from '@configs/configEnvs';
 import { IErrorResponse } from '@helpers/errors/errorResponse.interface';
 import { CustomError } from '@helpers/errors/customError';
+import applicationRoutes from '@interfaces/http/routes';
 
 const log: Logger = logger.createLogger('setupServer');
 
@@ -26,7 +27,7 @@ export class AutoServer {
 	public start(): void {
 		this.securityMiddleware(this.app);
 		this.standarMiddleware(this.app);
-		// this.routesMiddleware(this.app);
+		this.routesMiddleware(this.app);
 		this.globalErrorHandler(this.app);
 		this.startServer(this.app);
 	}
@@ -80,7 +81,7 @@ export class AutoServer {
 	}
 
 	private routesMiddleware(app: Application): void {
-		//todo
+		applicationRoutes(app);
 	}
 
 	private globalErrorHandler(app: Application): void {

@@ -8,7 +8,9 @@ const authSchema: Schema = new Schema(
 		uid: { type: 'String' },
 		email: { type: 'String' },
 		password: { type: 'String' },
-		createdAt: { type: Date, default: Date.now() }
+		createdAt: { type: Date, default: Date.now() },
+		passwordResetToken: { type: String, default: '' },
+		passwordResetExpires: { type: Number }
 	},
 	{
 		toJSON: {

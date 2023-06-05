@@ -5,7 +5,9 @@ const userSchema: Schema = new Schema({
 	authId: { type: mongoose.Schema.Types.ObjectId, ref: 'Auth' },
 	bio: { type: String, default: '' },
 	favoriteCars: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Car' }],
-	favoriteMotorcycle: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Car' }]
+	favoriteMotorcycle: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Car' }],
+	passwordResetToken: { type: String, default: '' },
+	passwordResetExpires: { type: Number }
 });
 
 const UserModel: Model<IUserDocument> = model<IUserDocument>('User', userSchema, 'User');
